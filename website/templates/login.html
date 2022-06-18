@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block head %}
+Flaskactice | Login
+{% endblock %}
+
+{% block body %}
+<br><div class="container"><h5 align="left">Sign in to use the following services:</h5>
+<h6 align="left">- Make notes<br>
+    - Make todo list<br>
+    - Classify spam texts </h6>
+    </div>
+
+<br>
+<form action="/" method="POST">
+    <h2 align="center">Sign in</h2>
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email"
+               class="form-control"
+               name="email"
+               id="email"
+               placeholder="Enter Email Address"
+       />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input
+                type="password"
+                class="form-control"
+                name="password"
+                id="password"
+                placeholder="Enter Password"
+        />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+<br>
+<a href="/signup">Create an Account</a>
+{% endblock %}

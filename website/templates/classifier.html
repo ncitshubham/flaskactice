@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head %}
+Flaskactice | Classifier
+{% endblock %}
+
+{% block body %}
+<h2 align="center">Tell whether a text is a spam or not</h2>
+<form method="POST">
+    <textarea name="text" id="text" class="form-control">{{text}}</textarea>
+    <br>
+    {% if message %}
+    {{message}}
+    {% endif %}
+    <div align="center">
+        <button type="submit" class="btn btn-primary">Classify</button>
+    </div>
+</form>
+
+{% endblock %}
